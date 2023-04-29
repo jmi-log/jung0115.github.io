@@ -44,7 +44,7 @@ const CategoryIcon = styled.img`
 `;
 
 const CategoryName = styled.div`
-  font-size: 1.5rem;
+  font-size: 0.7rem;
   font-family: 'omyu_pretty';
   color: ${palette.white};
 `;
