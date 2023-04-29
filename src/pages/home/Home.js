@@ -32,6 +32,7 @@ const Category = styled.div`
   align-items: center;
   justify-content : center;
   padding: 0.5rem 1rem;
+  margin-bottom: 14px;
   background-color: ${palette.mainColor};
   border-radius: 10px;
 `;
