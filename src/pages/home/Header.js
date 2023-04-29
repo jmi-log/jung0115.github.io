@@ -28,7 +28,7 @@ const Container = styled.div`
 const Title = styled.div`
   width: fit-content;
   margin: auto;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: 'omyu_pretty';
   color: ${palette.black};
 `;

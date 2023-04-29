@@ -16,7 +16,7 @@ const Container = styled.div`
 `;
 
 const Since = styled.div`
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   font-family: 'omyu_pretty';
   color: ${palette.darkGray};
 `;
