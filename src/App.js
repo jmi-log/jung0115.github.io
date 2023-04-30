@@ -31,7 +31,7 @@ function App() {
 
 const Contents = styled.div`
   height: auto;
-  margin: 4vh 5vw;
+  margin: 4vh 14vw;
 `;
 
 export default App;
