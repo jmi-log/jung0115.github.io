@@ -2,15 +2,18 @@ import styled from "styled-components";
 import palette from "../../styles/colorPalette";
 import { Link } from "react-router-dom";
 
+import logo from "../../images/ic_logo.png";
+
 const Header = () => {
   return (
     <Container>
       <Link
         to="/"
         style={{
-          color: "#000000",
+          color: palette.black,
           textDecoration: "none",
         }}>
+        <LogoIcon src={logo} />
         <Title>jmi.log</Title>
       </Link>
       <Hr />
@@ -23,6 +26,12 @@ const Container = styled.div`
   align-items: center;
   justify-content : center;
   text-align: center;
+`;
+
+const LogoIcon = styled.img`
+  width: 2.4rem;
+  height: auto;
+  margin-bottom: 10px;
 `;
 
 const Title = styled.div`
