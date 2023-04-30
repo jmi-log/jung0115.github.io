@@ -11,6 +11,7 @@ const Date = styled.div`
   width: fit-content;
   margin-left: auto;
   margin-right: 4vw;
+  margin-bottom: 20px;
   font-size: 1rem;
   font-family: 'omyu_pretty';
   color: ${palette.darkGray};

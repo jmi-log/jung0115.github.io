@@ -10,7 +10,7 @@ const Header = () => {
       <Link
         to="/"
         style={{
-          color: palette.black,
+          color: "#000000",
           textDecoration: "none",
         }}>
         <LogoIcon src={logo} />
