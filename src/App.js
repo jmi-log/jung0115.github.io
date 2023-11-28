@@ -1,37 +1,43 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 import './styles/App.css';
-import Header from "./pages/home/Header";
+import palette from "./styles/colorPalette";
+
+import Header from "./components/Header";
 import Home from "./pages/home/Home";
-import Footer from "./pages/home/Footer";
-import Yolo from "./pages/yolo/Yolo";
-import YoloChap1 from "./pages/yolo/YoloChap1";
-import YoloChap2 from "./pages/yolo/YoloChap2";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div style={{ margin: "6vh 10vw" }}>
+    <Container>
       <Router>
+        {/* 헤더: 블로그 타이틀 */}
         <Header />
 
         <Contents>
           <Routes>
-            <Route path="/yolo" element={<Yolo />} />
-            <Route path="/yolo/chap1" element={<YoloChap1 />} />
-            <Route path="/yolo/chap2" element={<YoloChap2 />} />
             <Route path="/" element={<Home />} />
           </Routes>
         </Contents>
 
+        {/* 푸터: 시작 날짜 */}
         <Footer />
       </Router>
-    </div>
+    </Container>
   );
 }
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  min-height: 100vh;
+  background: ${palette.background};
+`;
 const Contents = styled.div`
   height: auto;
-  margin: 4vh 14vw;
+  flex: 1;
+  margin: 0vh 40px;
 `;
 
 export default App;
