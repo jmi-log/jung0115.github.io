@@ -9,10 +9,7 @@ import icYOLO from "../../images/ic_yolo_green.png";
 const Home = () => {
   return(
     <Container>
-      <ContentsBtn
-        linkTo={"/yolo"}
-        iconSrc={icYOLO}
-        contentName={"YOLO"} />
+      
     </Container>
   );
 }

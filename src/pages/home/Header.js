@@ -31,7 +31,7 @@ const Container = styled.div`
 const LogoIcon = styled.img`
   width: 2.4rem;
   height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 `;
 
 const Title = styled.div`

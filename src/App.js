@@ -10,7 +10,7 @@ import YoloChap2 from "./pages/yolo/YoloChap2";
 
 function App() {
   return (
-    <div style={{ margin: "6vh 10vw" }}>
+    <div style={{ margin: "3vh 10vw" }}>
       <Router>
         <Header />
 
@@ -31,7 +31,7 @@ function App() {
 
 const Contents = styled.div`
   height: auto;
-  margin: 4vh 14vw;
+  margin: 5vh 14vw;
 `;
 
 export default App;
