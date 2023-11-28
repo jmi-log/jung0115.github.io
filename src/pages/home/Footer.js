@@ -18,7 +18,7 @@ const Container = styled.div`
 const Since = styled.div`
   font-size: 1rem;
   font-family: 'omyu_pretty';
-  color: ${palette.darkGray};
+  color: ${palette.gray65};
 `;
 
 export default Footer;
