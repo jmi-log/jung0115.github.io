@@ -1,5 +1,6 @@
+// 푸터
 import styled from "styled-components";
-import palette from "../../styles/colorPalette";
+import palette from "../styles/colorPalette";
 
 const Footer = () => {
   return (

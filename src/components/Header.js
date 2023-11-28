@@ -1,8 +1,9 @@
+// 헤더
 import styled from "styled-components";
-import palette from "../../styles/colorPalette";
+import palette from "../styles/colorPalette";
 import { Link } from "react-router-dom";
 
-import logo from "../../images/ic_logo.png";
+import logo from "../icons/ic_logo.png";
 
 const Header = () => {
   return (

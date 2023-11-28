@@ -1,6 +1,6 @@
 // 색상
 const palette = {
-  mainColor: "#79D959",
+  mainColor: "#96C576",
   
   white: '#FFFFFF',
   black: '#00000',

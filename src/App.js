@@ -3,9 +3,9 @@ import styled from "styled-components";
 import './styles/App.css';
 import palette from "./styles/colorPalette";
 
-import Header from "./pages/home/Header";
+import Header from "./components/Header";
 import Home from "./pages/home/Home";
-import Footer from "./pages/home/Footer";
+import Footer from "./components/Footer";
 
 function App() {
   return (
