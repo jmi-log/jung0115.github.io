@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2696fbcb.css",
+    "main.js": "/static/js/main.18414b73.js",
+    "static/media/omyu_pretty.ttf": "/static/media/omyu_pretty.a709da7b5fd009ebd794.ttf",
+    "static/media/ic_logo.png": "/static/media/ic_logo.bd49d87dee8f7f052f66.png",
+    "index.html": "/index.html",
+    "main.2696fbcb.css.map": "/static/css/main.2696fbcb.css.map",
+    "main.18414b73.js.map": "/static/js/main.18414b73.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2696fbcb.css",
+    "static/js/main.18414b73.js"
+  ]
+}
