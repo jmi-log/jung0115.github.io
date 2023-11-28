@@ -13,6 +13,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content : center;
+  padding: 2.2vh 0vh;
 `;
 
 const Since = styled.div`
