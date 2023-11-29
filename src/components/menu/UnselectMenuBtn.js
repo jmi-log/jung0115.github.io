@@ -31,6 +31,7 @@ const MenuName = styled.div`
   font-size: 18px;
   color: ${palette.mainColor};
   padding: 6px 10px 2px 10px;
+  cursor: pointer;
 `;
  
 // 메뉴 버튼 아이콘
@@ -38,6 +39,7 @@ const MenuIcon = styled.img`
   width: 55px;
   height: auto;
   margin-top: 2px;
+  cursor: pointer;
 `;
 
 export default UnselectMenuBtn;

@@ -33,6 +33,7 @@ const MenuName = styled.div`
   padding: 4px 10px;
   background: ${palette.lightGreen};
   border-radius: 20px;
+  cursor: pointer;
 `;
  
 // 메뉴 버튼 아이콘
@@ -40,6 +41,7 @@ const MenuIcon = styled.img`
   width: 55px;
   height: auto;
   margin-top: 2px;
+  cursor: pointer;
 `;
 
 export default SelectMenuBtn;
