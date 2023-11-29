@@ -21,6 +21,7 @@ const Since = styled.div`
   font-size: 1rem;
   font-family: 'omyu_pretty';
   color: ${palette.gray65};
+  cursor: default;
 `;
 
 export default Footer;
