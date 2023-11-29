@@ -41,8 +41,8 @@ const Menus = () => {
 const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content : center;
   margin-left: 48px;
+  position: absolute;
 `;
 
 export default Menus;

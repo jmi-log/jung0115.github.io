@@ -6,6 +6,7 @@ import palette from "./styles/colorPalette";
 import Header from "./components/Header";
 import Home from "./pages/home/Home";
 import Footer from "./components/Footer";
+import Menus from "./components/menu/Menus";
 
 function App() {
   return (
@@ -14,11 +15,18 @@ function App() {
         {/* 헤더: 블로그 타이틀 */}
         <Header />
 
-        <Contents>
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
-        </Contents>
+        <MainContent>
+          {/* 컨텐츠 내용 */}
+          <Contents>
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </Contents>
+
+          {/* 메뉴 버튼 */}
+          <Menus/>
+
+        </MainContent>
 
         {/* 푸터: 시작 날짜 */}
         <Footer />
@@ -32,12 +40,24 @@ const Container = styled.div`
   flex-direction: column;
   min-width: 100%;
   min-height: 100vh;
+  height: auto;
   background: ${palette.background};
 `;
-const Contents = styled.div`
-  height: auto;
+
+const MainContent = styled.div`
   flex: 1;
+  min-height: 100%;
+  flex-direction: column;
+  position: relative;
   margin: 0vh 40px;
+  top: -20px;
+`;
+
+const Contents = styled.div`
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  margin-top: 20px;
 `;
 
 export default App;
