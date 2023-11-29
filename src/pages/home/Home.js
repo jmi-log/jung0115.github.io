@@ -47,12 +47,25 @@ const Home = () => {
           </ContentGroup>
         </InfoContent>
 
-        <MoreBtn>
+        <MoreInfoBtn>
           <MoreContentsBtn
             text={"더 자세한 소개"}/>
-        </MoreBtn>
+        </MoreInfoBtn>
 
       </InfoContainer>
+
+      {/* 최근 글 8개 */}
+      <NewPostContainer>
+        <NewPostHeader>
+          <NewPostTitle>최근 글</NewPostTitle>
+          <MorePostBtn>
+            <MoreContentsBtn text={"더보기"}/>
+          </MorePostBtn>
+        </NewPostHeader>
+
+        <NewPostHr/>
+
+      </NewPostContainer>
       
     </Container>
   );
@@ -64,7 +77,7 @@ const Container = styled.div`
   border-radius: 10px;
   border: 2px solid ${palette.mainColor};
   margin-top: 20px;
-  padding: 67px 30px 38px 30px;
+  padding: 62px 30px 38px 30px;
 `;
 
 // 자기소개
@@ -128,9 +141,34 @@ const InfoText = styled.div`
   margin-left: 6px;
 `;
 
-// 자세히 보기
-const MoreBtn = styled.div`
+// 자기소개 자세히 보기
+const MoreInfoBtn = styled.div`
   margin: auto 28px 20px auto;
+`;
+
+// 최근글
+const NewPostContainer = styled.div`
+  margin-top: 24px;
+`;
+const NewPostHeader = styled.div`
+  display: flex;
+`;
+const NewPostTitle = styled.div`
+  color: ${palette.gray3C};
+  font-family: GmarketSansTTFMedium;
+  font-size: 20px;
+  margin-left: 17px;
+  margin-bottom: 12px;
+`;
+const MorePostBtn = styled.div`
+  margin: 0px 26px 18px auto;
+`;
+const NewPostHr = styled.hr`
+  width: auto;
+  height: 1.5px;
+  border: 0px;
+  background: ${palette.gray70};
+  margin: 0px 5px;
 `;
 
 export default Home;

@@ -22,11 +22,11 @@ const MoreText = styled.div`
   color: ${palette.gray65};
   font-family: GmarketSansTTFMedium;
   font-size: 14px;
-  margin-right: 10px;
+  margin-right: 8px;
 `;
 const MoreIcon = styled.img`
-  width: 10.5px;
-  height: 15.59px;
+  width: 8.4px;
+  height: 12.47px;
 `;
 
 export default MoreContentsBtn;
