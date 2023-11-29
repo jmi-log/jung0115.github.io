@@ -9,6 +9,7 @@ const palette = {
   highlightGreen: "#C3EAA9",
   boxBackground: "#D7E5CD",
   darkBoxBackground: "#CADDBD",
+  infoBackground: "#96C576",
 
   background: "#F3F3F3",
 
