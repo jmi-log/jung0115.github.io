@@ -8,7 +8,7 @@ import palette from "../../styles/colorPalette";
 import SelectMenuBtn from "../../components/menu/SelectMenuBtn";
 import UnselectMenuBtn from "../../components/menu/UnselectMenuBtn";
 
-const Menus = ({ selectMenuApp, onSelectHome, onSelectJmi }) => {
+const Menus = ({ selectMenuApp, onSelectHome, onSelectJmi, onSelectPosts }) => {
   const navigate = useNavigate();
 
   const menus = ["home", "jmi", "posts"];
@@ -26,6 +26,10 @@ const Menus = ({ selectMenuApp, onSelectHome, onSelectJmi }) => {
       navigate(`/jmi`);
       onSelectJmi();
     }
+    else if(menu == "posts") {
+      navigate(`/posts`);
+      onSelectPosts();
+    }
   }
 
   useEffect(() => {
@@ -40,6 +44,10 @@ const Menus = ({ selectMenuApp, onSelectHome, onSelectJmi }) => {
     else if(selectMenu == "jmi") {
       navigate(`/jmi`);
       onSelectJmi();
+    }
+    else if(selectMenu == "posts") {
+      navigate(`/posts`);
+      onSelectPosts();
     }
   }, [selectMenu]);
 

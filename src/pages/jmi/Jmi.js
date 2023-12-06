@@ -15,6 +15,11 @@ const Jmi = () => {
   const info = "Kotlin 기반의 안드로이드 앱 개발을 주로 하고 있지만, 크로스 플랫폼과 AI, 데이터 분석에도 관심을 갖고 공부합니다. 약 1년 반 동안 인공지능 학부 연구실 생활을 하며 AI 학습을 진행하였고, Remote Internship을 통해 데이터 분석 학습하고 있습니다.\n\n"
     + "프로젝트에서 다른 분야의 담당자들과 소통하는 것을 중요하게 생각합니다. 앱 개발 뿐만 아니라 디자인, 기획, 백엔드 지식을 갖춰 각 담당자들과 소통하는 역량을 기르는 중입니다\n\n"
     + "서비스 완성 뿐만 아니라 기술을 온전히 습득하고 직접 구현할 수 있는 능력을 얻는 것에 목표를 두었습니다. 이를 위해 기능과 방법을 이해한 뒤에 구현으로 옮기려고 하고 있습니다. 이전에 구현해본 적 없는 기능이나 다른 방법이 있는 부분에 대해서도 적극적으로 도전하려고 합니다."
+  const techStacks = [{"label": "Android |", "stack": "Android Studio, Java, Kotlin"},
+    {"label": "Cross-Platform |", "stack": "React Native, JavaScript, Flutter, Dart"},
+    {"label": "Web Frontend |", "stack": "React.js, JavaScript, HTML/CSS"},
+    {"label": "Server |", "stack": "Node.js, JavaScript, MySQL, SQL"},
+    {"label": "etc |", "stack": "Python, C, Git, Github, Firebase, OpenCV, Tensorflow"}];
   const projects = [{"name": "놀다가", "description": "3D 가상 공간 블로그 웹 서비스", "role": "WebGL, Three.js", "peroid": "2022.04 ~ 2022.11", "result1": "✅", "result2": ""},
     {"name": "개발새발", "description": "개발자를 위한 개발 기록 앱", "role": "AOS(Kotlin)", "peroid": "2022.11 ~ 2023.01", "result1": "✅", "result2": ""},
     {"name": "받장", "description": "장학금 및 지원금 조회 플랫폼", "role": "AOS(Kotlin)", "peroid": "2023.01 ~ 2023.02", "result1": "✅", "result2": ""},
@@ -25,6 +30,21 @@ const Jmi = () => {
     {"name": "Dream Quest", "description": "우울한 사람을 위한 활동 제안 서비스", "role": "React.js", "peroid": "2023.07 ~ 2023.07", "result1": "", "result2": "🏆"},
     {"name": "모우미", "description": "발달 장애인을 위한 쉬운 언어 번역 중개 서비스", "role": "React Native", "peroid": "2023.08 ~ 2023.10", "result1": "", "result2": "🏆"},
     {"name": "감자톤 주식 페이지", "description": "한림대x강원대 멋쟁이사자처럼 연합해커톤(감자톤) 주식 페이지", "role": "React.js", "peroid": "2023.09 ~ 2023.11", "result1": "✅", "result2": ""}];
+  const experiences = [{"name": "GNU 창의동아리 Big D.T 운영", "period": "2020.05 ~ 2020.07"},
+    {"name": "경상국립대학교 컴퓨터공학과 인공지능 학부 연구실 ", "period": "2021.03 ~ 2022.06"},
+    {"name": "GNU LINC+ 창업동아리 EARIA 운영 ", "period": "2021.05 ~ 2021.12"},
+    {"name": "GNU 창의융합동아리 멘토", "period": "2021.07 ~ 2021.12"},
+    {"name": "UMC 3rd Android 파트 수료 ", "period": "2022.09 ~ 2023.02"},
+    {"name": "UMC 4th Node.js 파트 수료 ", "period": "2023.03 ~ 2023.08"},
+    {"name": "Remote Internship Program 4th Expert Track 수료", "period": "2023.09 ~ 2023.11"}];
+  const awards = [{"name": "2020 GNU 창의동아리", "result": "우수상"},
+    {"name": "2021 GNU 빅데이터 아이디어 공모전", "result": "장려상"},
+    {"name": "2023 GNU 지식재산-빅데이터 경진대회", "result": "우수상"},
+    {"name": "2023 4th NE(O)RDINARY 해커톤", "result": "최우수상(2위)"},
+    {"name": "2023 HGU DREAMLAND 해커톤", "result": "장려상(5위)"},
+    {"name": "2023 서울 우먼테크 해커톤", "result": "우수상(3위)"},
+    {"name": "2023 메카이브 메이커톤", "result": "우수상(3위)"}];
+
 
   return(
     <ContentFooter>
@@ -76,6 +96,7 @@ const Jmi = () => {
 
         {/* tech stack, project, award */}
         <PortfolioContainer>
+
           {/* Tech Stack */}
           <PfTitleContainer>
             <PfTitle>🛠️ Tech Stack</PfTitle>
@@ -83,26 +104,12 @@ const Jmi = () => {
           </PfTitleContainer>
 
           <TechStackContainer>
-            <TechStack>
-              <TechStackLabel>Android | </TechStackLabel>
-              <TechStackText>Android Studio, Java, Kotlin</TechStackText>
-            </TechStack>
-            <TechStack>
-              <TechStackLabel>Cross-Platform | </TechStackLabel>
-              <TechStackText>React Native, JavaScript, Flutter, Dart</TechStackText>
-            </TechStack>
-            <TechStack>
-              <TechStackLabel>Web Frontend | </TechStackLabel>
-              <TechStackText>React.js, JavaScript, HTML/CSS</TechStackText>
-            </TechStack>
-            <TechStack>
-              <TechStackLabel>Server | </TechStackLabel>
-              <TechStackText>Node.js, JavaScript, MySQL, SQL</TechStackText>
-            </TechStack>
-            <TechStack>
-              <TechStackLabel>etc | </TechStackLabel>
-              <TechStackText>Python, C, Git, Github, Firebase, OpenCV, Tensorflow</TechStackText>
-            </TechStack>
+            {techStacks.map((techStack, idx) => (
+              <TechStack key={idx}>
+                <TechStackLabel>{techStack.label}</TechStackLabel>
+                <TechStackText>{techStack.stack}</TechStackText>
+              </TechStack>
+            ))}
           </TechStackContainer>
 
           {/* Project */}
@@ -124,7 +131,7 @@ const Jmi = () => {
 
             {projects.map((project, idx) => (
               <>
-                <ProjectLine>
+                <ProjectLine key={idx}>
                   <ProjectName> <ProjectContent>{project.name}</ProjectContent> </ProjectName>
                   <ProjectDescription> <ProjectContent>{project.description}</ProjectContent> </ProjectDescription>
                   <ProjectRole> <ProjectContent>{project.role}</ProjectContent> </ProjectRole>
@@ -132,13 +139,58 @@ const Jmi = () => {
                   <ProjectResult> <ProjectContentResult>{project.result1}</ProjectContentResult> <ProjectContentResult>{project.result2}</ProjectContentResult> </ProjectResult>
                 </ProjectLine>
 
-                <ProjectContentLine />
+                {projects.length != idx + 1 ?
+                  <ProjectContentLine />
+                  : <ProjectLastLine/> }
               </>
             ))}
 
           </ProjectContainer>
 
+          {/* Experience */}
+          <PfTitleContainer>
+            <PfTitle>🔥 Experience</PfTitle>
+            <PfTitleLine/>
+          </PfTitleContainer>
+
+          <ExperienceContainer>
+            <ExperienceLine>
+              <ExperienceName> <ExperienceTitle>활동</ExperienceTitle> </ExperienceName>
+              <ExperiencePeriod> <ExperienceTitle>진행 기간</ExperienceTitle> </ExperiencePeriod>
+            </ExperienceLine>
+            
+            <ExperienceTitleLine />
+
+            {experiences.map((experience, idx) => (
+              <>
+                <ExperienceLine key={idx}>
+                  <ExperienceName> <ExperienceContent>{experience.name}</ExperienceContent> </ExperienceName>
+                  <ExperiencePeriod> <ExperienceContent>{experience.period}</ExperienceContent> </ExperiencePeriod>
+                </ExperienceLine>
+
+                {experiences.length != idx + 1 ?
+                  <ExperienceContentLine />
+                  : <ExperienceLastLine/> }
+              </>
+            ))}
+
+          </ExperienceContainer>
+
           {/* Award */}
+          <PfTitleContainer>
+            <PfTitle>🏆 Award</PfTitle>
+            <PfTitleLine/>
+          </PfTitleContainer>
+
+          <AwardContainer>
+            {awards.map((award, idx) => (
+              <Award key={idx}>
+                <AwardName>{award.name}</AwardName>
+                <AwardResult>{award.result}</AwardResult>
+              </Award>
+            ))}
+
+          </AwardContainer>
 
         </PortfolioContainer>
 
@@ -152,6 +204,7 @@ const Jmi = () => {
 const ContentFooter = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
 `;
 
 const Container = styled.div`
@@ -281,7 +334,7 @@ const PfTitleLine = styled.div`
 const TechStackContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 22px 32px 10px 38px;
+  margin: 22px 32px 0px 38px;
 `;
 const TechStack = styled.div`
   display: flex;
@@ -296,12 +349,12 @@ const TechStackLabel = styled.div`
 const TechStackText = styled.div`
   color: ${palette.gray65};
   font-family: GmarketSansTTFMedium;
-  font-size: 16px;
+  font-size: 15px;
 `;
 
 // Project
 const ProjectContainer = styled.div`
-  margin: 18px 36px 0px 36px;
+  margin: 22px 36px 0px 36px;
 `;
 const ProjectName = styled.div`
   flex: 1.5;
@@ -354,6 +407,73 @@ const ProjectContentLine = styled.div`
   height: 0.5px;
   background: ${palette.gray82};
 `;
+const ProjectLastLine = styled.div`
+  width: 100%;
+  height: 1px;
+  background: ${palette.gray82};
+`;
 
+// Experience
+const ExperienceContainer = styled.div`
+  margin: 22px 36px 0px 36px;
+`;
+const ExperienceName = styled.div`
+  flex: 8;
+`;
+const ExperiencePeriod = styled.div`
+  flex: 2;
+`;
+const ExperienceLine = styled.div`
+  display: flex;
+`;
+const ExperienceTitle = styled.div`
+  color: ${palette.gray3C};
+  font-family: GmarketSansTTFMedium;
+  font-size: 15px;
+  margin: 10px 14px 10px 14px;
+`;
+const ExperienceContent = styled.div`
+  color: ${palette.gray65};
+  font-family: GmarketSansTTFMedium;
+  font-size: 14px;
+  margin: 10px 14px 10px 14px;
+`;
+const ExperienceTitleLine = styled.div`
+  width: 100%;
+  height: 1.5px;
+  background: ${palette.gray82};
+`;
+const ExperienceContentLine = styled.div`
+  width: 100%;
+  height: 0.5px;
+  background: ${palette.gray82};
+`;
+const ExperienceLastLine = styled.div`
+  width: 100%;
+  height: 1px;
+  background: ${palette.gray82};
+`;
+
+// Award
+const AwardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 22px 32px 0px 38px;
+`;
+const Award = styled.div`
+  display: flex;
+  margin-bottom: 10px;
+`;
+const AwardName = styled.div`
+  color: ${palette.gray3C};
+  font-family: GmarketSansTTFMedium;
+  font-size: 15px;
+  margin-right: 6px;
+`;
+const AwardResult = styled.div`
+  color: ${palette.gray3C};
+  font-family: GmarketSansTTFBold;
+  font-size: 15px;
+`;
 
 export default Jmi;

@@ -10,7 +10,7 @@ import MoreContentsBtn from "../../components/MoreContentsBtn";
 import PostItem from "../../components/PostItem";
 import Footer from "../../components/Footer";
 
-const Home = ({ onSelectJmi }) => {
+const Home = ({ onSelectJmi, onSelectPosts }) => {
 
   return(
     <ContentFooter>
@@ -63,7 +63,7 @@ const Home = ({ onSelectJmi }) => {
         <NewPostContainer>
           <NewPostHeader>
             <NewPostTitle>최근 글</NewPostTitle>
-            <MorePostBtn>
+            <MorePostBtn  onClick={onSelectPosts}>
               <MoreContentsBtn text={"더보기"}/>
             </MorePostBtn>
           </NewPostHeader>
@@ -100,6 +100,7 @@ const Home = ({ onSelectJmi }) => {
 const ContentFooter = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
 `;
 
 const Container = styled.div`

@@ -10,6 +10,7 @@ import Home from "./pages/home/Home";
 import Footer from "./components/Footer";
 import Menus from "./components/menu/Menus";
 import Jmi from "./pages/jmi/Jmi";
+import Posts from "./pages/posts/Posts";
 
 function App() {
   const [selectMenu, setSelectMenu] = useState("home");
@@ -20,6 +21,10 @@ function App() {
 
   const onSelectJmi = () => {
     setSelectMenu("jmi");
+  }
+
+  const onSelectPosts = () => {
+    setSelectMenu("posts");
   }
 
   useEffect(() => {
@@ -35,8 +40,9 @@ function App() {
           {/* 컨텐츠 내용 */}
           <Contents>
             <Routes>
-              <Route path="/" element={<Home onSelectJmi={onSelectJmi} />} />
+              <Route path="/" element={<Home onSelectJmi={onSelectJmi} onSelectPosts={onSelectPosts} />} />
               <Route path="/jmi" element={<Jmi />} />
+              <Route path="/posts" element={<Posts />} />
             </Routes>
           </Contents>
 
@@ -44,6 +50,7 @@ function App() {
           <Menus
             onSelectHome={onSelectHome}
             onSelectJmi={onSelectJmi}
+            onSelectPosts={onSelectPosts}
             selectMenuApp={selectMenu}/>
 
         </MainContent>
