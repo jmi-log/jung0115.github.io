@@ -1,3 +1,4 @@
+// 홈
 import styled from "styled-components";
 import palette from "../../styles/colorPalette";
 import { Link } from "react-router-dom";
@@ -7,88 +8,99 @@ import emailIcon from "../../icons/ic_info_email.png";
 import githubIcon from "../../icons/ic_info_github.png";
 import MoreContentsBtn from "../../components/MoreContentsBtn";
 import PostItem from "../../components/PostItem";
+import Footer from "../../components/Footer";
 
-const Home = () => {
+const Home = ({ onSelectJmi }) => {
+
   return(
-    <Container>
-      {/* 자기소개 */}
-      <InfoContainer>
-        <ProfileImg src="https://avatars.githubusercontent.com/u/76805879?v=4" />
+    <ContentFooter>
+      <Container>
+        {/* 자기소개 */}
+        <InfoContainer>
+          <ProfileImg src="https://avatars.githubusercontent.com/u/76805879?v=4" />
 
-        <InfoHr/>
+          <InfoHr/>
 
-        <InfoContent>
-          <TitleContainer>
-            <InfoTitle>👋🏻 안녕하세요, 안드로이드 앱 개발자를 꿈꾸는 조정미입니다.</InfoTitle>
-            <TitleHr />
-          </TitleContainer>
+          <InfoContent>
+            <TitleContainer>
+              <InfoTitle>👋🏻 안녕하세요, 안드로이드 앱 개발자를 꿈꾸는 조정미입니다.</InfoTitle>
+              <TitleHr />
+            </TitleContainer>
 
-          <ContentGroup>
-            <Info>
-              <InfoIcon src={organizationIcon}/>
-              <InfoText>경상국립대학교, 컴퓨터과학부 컴퓨터과학전공 재학 | 2020.03 ~</InfoText>
-            </Info>
+            <ContentGroup>
+              <Info>
+                <InfoIcon src={organizationIcon}/>
+                <InfoText>경상국립대학교, 컴퓨터과학부 컴퓨터과학전공 재학 | 2020.03 ~</InfoText>
+              </Info>
 
-            <Info>
-              <InfoIcon src={emailIcon}/>
-              <InfoText>jungim7490@naver.com</InfoText>
-            </Info>
+              <Info>
+                <InfoIcon src={emailIcon}/>
+                <InfoText>jungim7490@naver.com</InfoText>
+              </Info>
 
-            <Info>
-              <InfoIcon src={githubIcon}/>
-              <Link
-                to="https://github.com/jung0115"
-                style={{
-                  color: palette.gray65,
-                }}
-                target="_blank">
-              <InfoText>https://github.com/jung0115</InfoText>
-              </Link>
-            </Info>
-          </ContentGroup>
-        </InfoContent>
+              <Info>
+                <InfoIcon src={githubIcon}/>
+                <Link
+                  to="https://github.com/jung0115"
+                  style={{
+                    color: palette.gray65,
+                  }}
+                  target="_blank">
+                <InfoText>https://github.com/jung0115</InfoText>
+                </Link>
+              </Info>
+            </ContentGroup>
+          </InfoContent>
 
-        <MoreInfoBtn>
-          <MoreContentsBtn
-            text={"더 자세한 소개"}/>
-        </MoreInfoBtn>
+          <MoreInfoBtn onClick={onSelectJmi}>
+              <MoreContentsBtn
+                text={"더 자세한 소개"}/>
+          </MoreInfoBtn>
 
-      </InfoContainer>
+        </InfoContainer>
 
-      {/* 최근 글 8개 */}
-      <NewPostContainer>
-        <NewPostHeader>
-          <NewPostTitle>최근 글</NewPostTitle>
-          <MorePostBtn>
-            <MoreContentsBtn text={"더보기"}/>
-          </MorePostBtn>
-        </NewPostHeader>
+        {/* 최근 글 8개 */}
+        <NewPostContainer>
+          <NewPostHeader>
+            <NewPostTitle>최근 글</NewPostTitle>
+            <MorePostBtn>
+              <MoreContentsBtn text={"더보기"}/>
+            </MorePostBtn>
+          </NewPostHeader>
 
-        <NewPostHr/>
+          <NewPostHr/>
 
-        <PostList>
-          <PostItem
-            title={"[Android Studio] Paging"}
-            contents={"Android Developer 사이트를 구경하다가 Paging이라는 걸 발견했다. Recyclerview에서 데이터를 페이지로 끊어서 가져올 수 있는 것 같다. 표시해야 할 데이터가 많아서 스크롤이 작아지고 화면이 길어지면 그 데이터를 다 불러올 동안 로딩 시간이 너무 많이 걸리게 된다. 이전에 참여한 앱 프로젝트에서 이런 경우가 있었는데 당시에는 다른 기능을 빨리 마무리해야 해서 해결을 못하고 넘어갔지만 이 방법을 적용하면 될 것 같다.\n\n\n\n\n지금 졸업작품으로 만들고 있는 앱에도 이게 도움이 될 것 같다. 해당 부분에 적용해봐야겠다."}
-            date={"2023.09.01 "}
-            categories={["App", "Android Studio"]}
-            viewCount={29}
-            image={"https://github.com/jung0115/jung0115/assets/76805879/686139a2-c6fd-46c8-a3b2-657f4e3f3373"}/>
-          
-          <PostItem
-            title={"[Android Studio] Paging"}
-            contents={"Android Developer 사이트를 구경하다가 Paging이라는 걸 발견했다. Recyclerview에서 데이터를 페이지로 끊어서 가져올 수 있는 것 같다. 표시해야 할 데이터가 많아서 스크롤이 작아지고 화면이 길어지면 그 데이터를 다 불러올 동안 로딩 시간이 너무 많이 걸리게 된다. 이전에 참여한 앱 프로젝트에서 이런 경우가 있었는데 당시에는 다른 기능을 빨리 마무리해야 해서 해결을 못하고 넘어갔지만 이 방법을 적용하면 될 것 같다.\n\n\n\n\n지금 졸업작품으로 만들고 있는 앱에도 이게 도움이 될 것 같다. 해당 부분에 적용해봐야겠다."}
-            date={"2023.09.01 "}
-            categories={["App", "Android Studio"]}
-            viewCount={29}
-            image={"https://github.com/jung0115/jung0115/assets/76805879/686139a2-c6fd-46c8-a3b2-657f4e3f3373"}/>
-        </PostList>
+          <PostList>
+            <PostItem
+              title={"[Android Studio] Paging"}
+              contents={"Android Developer 사이트를 구경하다가 Paging이라는 걸 발견했다. Recyclerview에서 데이터를 페이지로 끊어서 가져올 수 있는 것 같다. 표시해야 할 데이터가 많아서 스크롤이 작아지고 화면이 길어지면 그 데이터를 다 불러올 동안 로딩 시간이 너무 많이 걸리게 된다. 이전에 참여한 앱 프로젝트에서 이런 경우가 있었는데 당시에는 다른 기능을 빨리 마무리해야 해서 해결을 못하고 넘어갔지만 이 방법을 적용하면 될 것 같다.\n\n\n\n\n지금 졸업작품으로 만들고 있는 앱에도 이게 도움이 될 것 같다. 해당 부분에 적용해봐야겠다."}
+              date={"2023.09.01 "}
+              categories={["App", "Android Studio"]}
+              viewCount={29}
+              image={"https://github.com/jung0115/jung0115/assets/76805879/686139a2-c6fd-46c8-a3b2-657f4e3f3373"}/>
+            
+            <PostItem
+              title={"[Android Studio] Paging"}
+              contents={"Android Developer 사이트를 구경하다가 Paging이라는 걸 발견했다. Recyclerview에서 데이터를 페이지로 끊어서 가져올 수 있는 것 같다. 표시해야 할 데이터가 많아서 스크롤이 작아지고 화면이 길어지면 그 데이터를 다 불러올 동안 로딩 시간이 너무 많이 걸리게 된다. 이전에 참여한 앱 프로젝트에서 이런 경우가 있었는데 당시에는 다른 기능을 빨리 마무리해야 해서 해결을 못하고 넘어갔지만 이 방법을 적용하면 될 것 같다.\n\n\n\n\n지금 졸업작품으로 만들고 있는 앱에도 이게 도움이 될 것 같다. 해당 부분에 적용해봐야겠다."}
+              date={"2023.09.01 "}
+              categories={["App", "Android Studio"]}
+              viewCount={29}
+              image={"https://github.com/jung0115/jung0115/assets/76805879/686139a2-c6fd-46c8-a3b2-657f4e3f3373"}/>
+          </PostList>
 
-      </NewPostContainer>
-      
-    </Container>
+        </NewPostContainer>
+        
+      </Container>
+
+      <Footer/>
+    </ContentFooter>
   );
 }
+
+const ContentFooter = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 const Container = styled.div`
   display: flex;

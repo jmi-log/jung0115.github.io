@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
+
 import styled from "styled-components";
 import './styles/App.css';
 import palette from "./styles/colorPalette";
@@ -7,8 +9,22 @@ import Header from "./components/Header";
 import Home from "./pages/home/Home";
 import Footer from "./components/Footer";
 import Menus from "./components/menu/Menus";
+import Jmi from "./pages/jmi/Jmi";
 
 function App() {
+  const [selectMenu, setSelectMenu] = useState("home");
+
+  const onSelectHome = () => {
+    setSelectMenu("home");
+  }
+
+  const onSelectJmi = () => {
+    setSelectMenu("jmi");
+  }
+
+  useEffect(() => {
+  }, [selectMenu]);
+
   return (
     <Container>
       <Router>
@@ -19,17 +35,19 @@ function App() {
           {/* 컨텐츠 내용 */}
           <Contents>
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Home onSelectJmi={onSelectJmi} />} />
+              <Route path="/jmi" element={<Jmi />} />
             </Routes>
           </Contents>
 
           {/* 메뉴 버튼 */}
-          <Menus/>
+          <Menus
+            onSelectHome={onSelectHome}
+            onSelectJmi={onSelectJmi}
+            selectMenuApp={selectMenu}/>
 
         </MainContent>
 
-        {/* 푸터: 시작 날짜 */}
-        <Footer />
       </Router>
     </Container>
   );
@@ -39,12 +57,12 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-width: 100%;
-  min-height: 100vh;
-  height: auto;
+  height: 100%;
   background: ${palette.background};
 `;
 
 const MainContent = styled.div`
+  display: flex;
   flex: 1;
   min-height: 100%;
   flex-direction: column;
@@ -54,6 +72,7 @@ const MainContent = styled.div`
 `;
 
 const Contents = styled.div`
+  display: flex;
   position: absolute;
   width: 100%;
   min-height: 100%;
