@@ -13,8 +13,8 @@ const Footer = () => {
 const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content : center;
-  padding: 2.2vh 0vh;
+  justify-content: center;
+  padding: 20px 0px;
 `;
 
 const Since = styled.div`
