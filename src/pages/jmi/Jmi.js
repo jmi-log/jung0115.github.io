@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 import organizationIcon from "../../icons/ic_info_organization.png";
 import emailIcon from "../../icons/ic_info_email.png";
 import githubIcon from "../../icons/ic_info_github.png";
-import MoreContentsBtn from "../../components/MoreContentsBtn";
-import PostItem from "../../components/PostItem";
 import Footer from "../../components/Footer";
 
 const Jmi = () => {
