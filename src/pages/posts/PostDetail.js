@@ -14,6 +14,7 @@ const PostDetail = () => {
           {/* 제목 헤더 */}
           <PostTitleContainer>
             <PostTitleTop>
+              {/* 제목 */}
               <PostTitleTopLeft>
                 <PostCategory>App / Android Studio</PostCategory>
                 <PostTitle>
@@ -22,13 +23,19 @@ const PostDetail = () => {
                 </PostTitle>
               </PostTitleTopLeft>
                 
+              {/* 공유 버튼 */}
               <PostTitleTopRight>
                 <PostShareBtn src={shareIcon}/>
               </PostTitleTopRight>
             </PostTitleTop>
-            
-            <PostTitleBottom>
 
+            {/* 작성일, 조회수 */} 
+            <PostTitleBottom>
+              <PostDate>2023.09.01. 22:08</PostDate>
+              <PostViewCountContainer>
+                <PostViewCountText>조회수</PostViewCountText>
+                <PostViewCountNum>29</PostViewCountNum>
+              </PostViewCountContainer>
             </PostTitleBottom>
 
           </PostTitleContainer>
@@ -87,7 +94,7 @@ const TitleBottomLine = styled.div`
 `;
 const PostTitleTop = styled.div`
   display: flex;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 `;
 const PostTitleTopLeft = styled.div`
   flex: 5;
@@ -100,6 +107,8 @@ const PostTitleTopRight = styled.div`
 `;
 const PostTitleBottom = styled.div`
   display: flex;
+  margin-left: 22px;
+  margin-bottom: 16px;
 `;
 const PostCategory = styled.div`
   color: ${palette.gray65};
@@ -135,8 +144,19 @@ const PostDate = styled.div`
   color: ${palette.gray82};
   font-size: 13px;
 `;
-const PostViewCount = styled.div`
+const PostViewCountContainer = styled.div`
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+`;
+const PostViewCountText = styled.div`
+  color: ${palette.gray82}; 
   font-size: 13px;
+`;
+const PostViewCountNum = styled.div`
+  color: ${palette.mainColor};
+  font-size: 13px;
+  margin-left: 5px;
 `;
 
 const CategoryContainer = styled.div`
