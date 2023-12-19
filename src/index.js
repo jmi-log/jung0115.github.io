@@ -9,4 +9,7 @@ root.render(
 
 /*
 npm i styled-components
+
+npm i react-markdown
+npm install remark-gfm
 */

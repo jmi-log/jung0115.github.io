@@ -4,8 +4,17 @@ import palette from "../../styles/colorPalette";
 import Footer from "../../components/Footer";
 
 import shareIcon from "../../icons/ic_share.png";
+import Markdown from "../../lib/markdown/Markdown";
 
 const PostDetail = () => {
+  const postText = `### Test
+  - test1111
+  - test2222  
+  게시글 마크다운
+  
+  - [x] test3333  
+  디자인이 망쳐져서 다른 방법을 찾을 필요가...`;
+
   return (
     <ContentFooter>
       <Container>
@@ -42,8 +51,11 @@ const PostDetail = () => {
           <TitleBottomLine/>
 
           {/* 본문 내용(마크다운) */}
+          <Markdown text={postText}/>
 
-          {/* 해시태그, 좋아요, 댓글 */}
+          {/* 해시태그, 좋아요, 댓글 열기 */}
+
+          {/* 댓글 리스트 */}
 
           {/* 이전글, 다음글 이동 버튼 */}
 
