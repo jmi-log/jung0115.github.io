@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import Menus from "./components/menu/Menus";
 import Jmi from "./pages/jmi/Jmi";
 import Posts from "./pages/posts/Posts";
+import PostDetail from "./pages/posts/PostDetail";
 
 function App() {
   const [selectMenu, setSelectMenu] = useState("home");
@@ -43,6 +44,7 @@ function App() {
               <Route path="/" element={<Home onSelectJmi={onSelectJmi} onSelectPosts={onSelectPosts} />} />
               <Route path="/jmi" element={<Jmi />} />
               <Route path="/posts" element={<Posts />} />
+              <Route path="/post-detail" element={<PostDetail />} />
             </Routes>
           </Contents>
 
