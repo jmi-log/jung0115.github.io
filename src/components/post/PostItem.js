@@ -1,11 +1,11 @@
-// 게시물 리스트 아이템 - 홈 탭에서 보이는 아이템
+// 게시물 리스트 아이템 - post 탭에서 보이는 아이템
 import styled from "styled-components";
-import palette from "../styles/colorPalette";
+import palette from "../../styles/colorPalette";
 
-import dotIcon from "../icons/ic_post_info_dot.png";
+import dotIcon from "../../icons/ic_post_info_dot.png";
 
 // 제목, 글 내용, 작성일, 카테고리(배열), 조회수, 이미지 URL
-const PostItemForHome = ({ title, contents, date, categories, viewCount, image }) => {
+const PostItem = ({ title, contents, date, categories, viewCount, image }) => {
   return(
     <Container>
       <Contents>
@@ -53,7 +53,7 @@ const Container = styled.div`
 `;
 
 const Contents = styled.div`
-  flex: 4.8;
+  flex: 3.5;
   font-family: GmarketSansTTFMedium;
 `;
 
@@ -119,4 +119,4 @@ const ThumbnailImg = styled.img`
   object-fit: cover;
 `;
 
-export default PostItemForHome;
+export default PostItem;
