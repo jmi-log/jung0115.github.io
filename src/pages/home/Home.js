@@ -7,7 +7,7 @@ import organizationIcon from "../../icons/ic_info_organization.png";
 import emailIcon from "../../icons/ic_info_email.png";
 import githubIcon from "../../icons/ic_info_github.png";
 import MoreContentsBtn from "../../components/MoreContentsBtn";
-import PostItemForHome from "../../components/PostItemForHome";
+import PostItemForHome from "../../components/post/PostItemForHome";
 import Footer from "../../components/Footer";
 
 const Home = ({ onSelectJmi, onSelectPosts }) => {

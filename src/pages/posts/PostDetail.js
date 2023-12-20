@@ -1,10 +1,17 @@
 // 게시물 세부
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import palette from "../../styles/colorPalette";
+
 import Footer from "../../components/Footer";
+import Markdown from "../../lib/markdown/Markdown";
+import PostHashTag from "../../components/post/PostHashTag";
 
 import shareIcon from "../../icons/ic_share.png";
-import Markdown from "../../lib/markdown/Markdown";
+import postUngoodIcon from "../../icons/ic_good_unselected.png";
+import postGoodIcon from "../../icons/ic_good_selected.png";
+import postPreviousIcon from "../../icons/ic_post_previous.png";
+import postNextIcon from "../../icons/ic_post_next.png";
 
 const PostDetail = () => {
   const postText = `### Test
@@ -14,6 +21,11 @@ const PostDetail = () => {
   
   - [x] test3333  
   디자인이 망쳐져서 다른 방법을 찾을 필요가...`;
+
+  const [isGood, setIsGood] = useState(false);
+
+  useEffect(() => {
+  }, [isGood]);
 
   return (
     <ContentFooter>
@@ -53,11 +65,57 @@ const PostDetail = () => {
           {/* 본문 내용(마크다운) */}
           <Markdown text={postText}/>
 
-          {/* 해시태그, 좋아요, 댓글 열기 */}
+          {/* 해시태그, 도움 됐어요, 댓글 열기 */}
+          <HashTagList>
+            <PostHashTag tag={"안드로이드"}/>
+            <PostHashTag tag={"앱 개발"}/>
+          </HashTagList>
+          
+          <PostFunBtns>
+            {isGood ?
+              <PostGoodBtn
+                onClick={() => setIsGood(false)}>
+                <PostGoodIcon
+                  src={postGoodIcon}/>
+                <PostGoodText>도움됐어요</PostGoodText>
+                <PostGoodCount>1</PostGoodCount>
+              </PostGoodBtn>
+              :
+              <PostUngoodBtn
+                onClick={() => setIsGood(true)}>
+                <PostGoodIcon
+                  src={postUngoodIcon}/>
+                <PostGoodText>도움됐어요</PostGoodText>
+                <PostGoodCount>0</PostGoodCount>
+              </PostUngoodBtn>
+            }
+            
+          </PostFunBtns>
+
+          <PostBottomLine />
 
           {/* 댓글 리스트 */}
 
           {/* 이전글, 다음글 이동 버튼 */}
+          <PostMoveBtns>
+            <PostPreviousBtn>
+              <PostMoveIcon
+                src={postPreviousIcon}/>
+              <PostPreviousText>
+                <PostPreviousLabel>이전 글</PostPreviousLabel>
+                <PostMoveTitle>이전 글로 이동합시다.</PostMoveTitle>
+              </PostPreviousText>
+            </PostPreviousBtn>
+
+            <PostNextBtn>
+              <PostNextText>
+                <PostNextLabel>다음 글</PostNextLabel>
+                <PostMoveTitle>다음 글로 이동합시다.</PostMoveTitle>
+              </PostNextText>
+              <PostMoveIcon
+                src={postNextIcon}/>
+            </PostNextBtn>
+          </PostMoveBtns>
 
         </PostContainer>
 
@@ -83,7 +141,7 @@ const Container = styled.div`
   border-radius: 10px;
   border: 2px solid ${palette.mainColor};
   margin-top: 20px;
-  padding: 92px 43px 38px 46px;
+  padding: 82px 43px 40px 46px;
   font-family: GmarketSansTTFMedium;
 `;
 
@@ -135,7 +193,6 @@ const PostTitle = styled.div`
 `;
 const PostTitleText = styled.div`
   color: ${palette.gray3C};
-  font-family: GmarketSansTTFMedium;
   font-size: 28px;
   z-index: 100;
 `;
@@ -151,6 +208,7 @@ const PostShareBtn = styled.img`
   width: 30px;
   height: 30px;
   margin: 25px 25px 0px auto;
+  cursor: pointer;
 `;
 const PostDate = styled.div`
   color: ${palette.gray82};
@@ -169,6 +227,111 @@ const PostViewCountNum = styled.div`
   color: ${palette.mainColor};
   font-size: 13px;
   margin-left: 5px;
+`;
+
+const HashTagList = styled.div`
+  display: flex;
+  margin-top: 16px;
+`;
+const PostFunBtns = styled.div`
+  display: flex;
+  margin-top: 18px;
+`;
+const PostUngoodBtn = styled.div`
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  border-radius: 20px;
+  border: 1px solid ${palette.mainColor};
+  padding: 9px 15px;
+  cursor: pointer;
+`;
+const PostGoodBtn = styled.div`
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  border-radius: 20px;
+  border: 1px solid ${palette.mainColor};
+  padding: 9px 15px;
+  background: ${palette.boxBackground};
+  cursor: pointer;
+`;
+const PostGoodIcon = styled.img`
+  width: 20px;
+  height: 20px;
+  margin-right: 7px;
+`;
+const PostGoodText = styled.div`
+  color: ${palette.gray65};
+  font-size: 15px;
+  margin-right: 5px;
+`;
+const PostGoodCount = styled.div`
+  color: ${palette.mainColor};
+  font-size: 15px;  
+`;
+
+const PostBottomLine = styled.div`
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: ${palette.gray82};
+  margin: 22px 0px;
+`;
+
+const PostMoveBtns = styled.div`
+  display: flex;
+`;
+const PostPreviousBtn = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin-right: 40px;
+  padding: 13px 18px 14px 18px;
+  border-radius: 10px;
+  background: ${palette.white};
+`;
+const PostNextBtn = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin-left: 40px;
+  padding: 13px 18px 14px 18px;
+  border-radius: 10px;
+  background: ${palette.white};
+  float: right;
+`;
+const PostMoveIcon = styled.img`
+  width: 39px;
+  height: 39px;
+`;
+const PostPreviousText = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const PostNextText = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+`;
+const PostPreviousLabel = styled.div`
+  color: ${palette.gray70};
+  font-size: 17px;
+  margin: 0px 15px 3px 15px;
+`;
+const PostNextLabel = styled.div`
+  color: ${palette.gray70};
+  font-size: 17px;
+  margin: 0px 15px 3px auto;
+`;
+const PostMoveTitle = styled.div`
+  color: ${palette.gray3C};
+  font-size: 16px;
+  margin: 0px 15px;
 `;
 
 const CategoryContainer = styled.div`
