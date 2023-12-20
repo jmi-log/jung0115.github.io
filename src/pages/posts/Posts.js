@@ -5,7 +5,7 @@ import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
 
 import MoreContentsBtn from "../../components/MoreContentsBtn";
-import PostItem from "../../components/PostItem";
+import PostItem from "../../components/post/PostItem";
 
 const Posts = () => {
   return (

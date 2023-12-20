@@ -5,6 +5,7 @@ import Footer from "../../components/Footer";
 
 import shareIcon from "../../icons/ic_share.png";
 import Markdown from "../../lib/markdown/Markdown";
+import PostHashTag from "../../components/post/PostHashTag";
 
 const PostDetail = () => {
   const postText = `### Test
@@ -54,6 +55,11 @@ const PostDetail = () => {
           <Markdown text={postText}/>
 
           {/* 해시태그, 좋아요, 댓글 열기 */}
+          <HashTagList>
+            <PostHashTag tag={"안드로이드"}/>
+            <PostHashTag tag={"앱 개발"}/>
+          </HashTagList>
+          
 
           {/* 댓글 리스트 */}
 
@@ -169,6 +175,10 @@ const PostViewCountNum = styled.div`
   color: ${palette.mainColor};
   font-size: 13px;
   margin-left: 5px;
+`;
+
+const HashTagList = styled.div`
+  display: flex;
 `;
 
 const CategoryContainer = styled.div`
