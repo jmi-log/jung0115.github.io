@@ -2,21 +2,27 @@
 import styled from "styled-components";
 import palette from "../styles/colorPalette";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 import logo from "../icons/ic_logo.png";
 
-const Header = () => {
+const Header = ({ onSelectHome }) => {
+  const navigate = useNavigate();
+
+  const navigateHome = () => {
+    navigate(`/`);
+    onSelectHome();
+  }
+
   return (
     <Container>
-      <Link
-        to="/"
-        style={{
-          color: "#000000",
-          textDecoration: "none",
-        }}>
-        <LogoIcon src={logo} />
-        <Title>jmi.log</Title>
-      </Link>
+      <LogoIcon
+        onClick={navigateHome}
+        src={logo} />
+      <Title
+        onClick={navigateHome}>
+        jmi.log
+      </Title>
       <Hr />
     </Container>
   );
@@ -34,6 +40,7 @@ const LogoIcon = styled.img`
   height: auto;
   margin-top: 3vh;
   margin-bottom: 5px;
+  cursor: pointer;
 `;
 
 const Title = styled.div`
@@ -42,6 +49,7 @@ const Title = styled.div`
   font-size: 2.3rem;
   font-family: 'omyu_pretty';
   color: ${palette.black};
+  cursor: pointer;
 `;
 
 const Hr = styled.hr`
