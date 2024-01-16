@@ -35,7 +35,8 @@ function App() {
     <Container>
       <Router>
         {/* 헤더: 블로그 타이틀 */}
-        <Header />
+        <Header
+          onSelectHome={onSelectHome}/>
 
         <MainContent>
           {/* 컨텐츠 내용 */}
