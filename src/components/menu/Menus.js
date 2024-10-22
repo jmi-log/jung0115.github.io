@@ -8,10 +8,10 @@ import palette from "../../styles/colorPalette";
 import SelectMenuBtn from "../../components/menu/SelectMenuBtn";
 import UnselectMenuBtn from "../../components/menu/UnselectMenuBtn";
 
-const Menus = ({ selectMenuApp, onSelectHome, onSelectJmi, onSelectPosts }) => {
+const Menus = ({ selectMenuApp, onSelectHome, onSelectJmi, onSelectPosts, onSelectPortfolio }) => {
   const navigate = useNavigate();
 
-  const menus = ["home", "jmi", "posts"];
+  const menus = ["home", "jmi", "portfolio"];
 
   const [selectMenu, setSelectMenu] = useState(selectMenuApp);
 
@@ -25,6 +25,10 @@ const Menus = ({ selectMenuApp, onSelectHome, onSelectJmi, onSelectPosts }) => {
     else if(menu == "jmi") {
       navigate(`/jmi`);
       onSelectJmi();
+    }
+    else if(menu == "portfolio") {
+      navigate(`/portfolio`);
+      onSelectPortfolio();
     }
     else if(menu == "posts") {
       navigate(`/posts`);
@@ -44,6 +48,10 @@ const Menus = ({ selectMenuApp, onSelectHome, onSelectJmi, onSelectPosts }) => {
     else if(selectMenu == "jmi") {
       navigate(`/jmi`);
       onSelectJmi();
+    }
+    else if(selectMenu == "portfolio") {
+      navigate(`/portfolio`);
+      onSelectPortfolio();
     }
     else if(selectMenu == "posts") {
       navigate(`/posts`);
