@@ -41,7 +41,6 @@ const Content = styled.div`
   padding: 15px;
   background: ${(props) => props.backgroundColor || palette.portfolioBackground};
   border-radius: 8px;
-
   cursor: pointer;
 `;
 
@@ -94,7 +93,7 @@ const Goal = styled.div`
   display: inline-block;
   color: ${palette.gray3C};
   font-size: 13px;
-  padding: 3px 6px;
+  padding: 3px 6px 4px 6px;
   margin: 4px 0px 0px 6px;
   background: ${palette.white};
   border-radius: 5px;

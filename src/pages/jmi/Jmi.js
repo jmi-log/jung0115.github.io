@@ -84,7 +84,7 @@ const Jmi = () => {
               textDecoration: 'none',
             }}
             target="_blank">
-            <MoreResumeBtn>✨ 이력서 자세히 보기</MoreResumeBtn>
+            <MoreResumeBtn>🔗 이력서 자세히 보기 (Click!)</MoreResumeBtn>
           </Link>
         </MoreResumeContainer>
 
@@ -406,9 +406,9 @@ const MoreResumeBtn = styled.div`
   margin: auto;
   padding: 5px 14px 6px 14px;
   border-radius: 99px;
-  border: 2px solid ${palette.darkBoxBackground};
-  background: ${palette.mainColor};
-  color: ${palette.white};
+  border: 2px solid ${palette.mainColor};
+  background: ${palette.white};
+  color: ${palette.gray3C};
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
   font-family: GmarketSansTTFMedium;
   cursor: pointer;
