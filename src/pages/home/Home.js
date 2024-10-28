@@ -19,7 +19,7 @@ const Home = ({ onSelectJmi, onSelectPosts, onSelectPortfolio }) => {
     {"title": "개발새발", "period": "2022.11 ~ 2023.01 (3개월)", "goal": "✅ Google Play Store 출시", "backgroundColor": "#E5D5F9",
       "skills": ["Android", "Kotlin", "Jetpack Room", "Navigation"], "thumbnailUrl": "https://github.com/user-attachments/assets/c97fe103-8469-47d9-9ae8-5ddd4f3785d5"},
     {"title": "감자톤 간식 게임 웹사이트", "period": "2023.09 ~ 2023.11 (3개월)", "goal": "💻 2023 한림대 x 강원대 멋쟁이사자처럼 연합 해커톤 '감자톤' 운영", "backgroundColor": "#F9E1CF",
-      "skills": ["React.js", "JavaScript", "TypeScript"], "thumbnailUrl": "https://github.com/jung0115/Potato-thon-game_FRONT/assets/76805879/dc618c0a-f64f-44b3-998f-b4c63a6a4782"}
+      "skills": ["React.js", "JavaScript", "TypeScript"], "thumbnailUrl": "https://github.com/user-attachments/assets/719a35fc-9c69-41ca-a9ed-f7a7b8f45699"}
   ]
 
   return(

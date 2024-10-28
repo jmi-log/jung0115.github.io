@@ -7,7 +7,6 @@ import palette from "./styles/colorPalette";
 
 import Header from "./components/Header";
 import Home from "./pages/home/Home";
-import Footer from "./components/Footer";
 import Menus from "./components/menu/Menus";
 import Jmi from "./pages/jmi/Jmi";
 import Portfolio from "./pages/portfolio/Portfolio";
