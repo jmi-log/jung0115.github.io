@@ -39,7 +39,7 @@ const Jmi = () => {
             <ContentGroup>
               <Info>
                 <InfoIcon src={emailIcon}/>
-                <InfoText>jungim7490@naver.com</InfoText>
+                <InfoTextEmail>jungim7490@naver.com</InfoTextEmail>
               </Info>
 
               <Info>
@@ -76,9 +76,20 @@ const Jmi = () => {
 
         </InfoContainer>
 
+        {/* 이력서 자세히 보기 */}
+        <MoreResumeContainer>
+          <Link
+            to="https://drive.google.com/file/d/1BIx2buYQIiaQkHGYX_R2sIID3eVN9oaK/view?usp=sharing"
+            style={{
+              textDecoration: 'none',
+            }}
+            target="_blank">
+            <MoreResumeBtn>✨ 이력서 자세히 보기</MoreResumeBtn>
+          </Link>
+        </MoreResumeContainer>
+
         {/* project, award */}
         <PortfolioContainer>
-
 
           {/* Experience */}
           <PfTitleContainer>
@@ -175,6 +186,7 @@ const InfoContainer = styled.div`
   border-radius: 3px;
   border: 2px solid ${palette.mainColor};
   background: ${palette.background};
+  margin-bottom: 15px;
 `;
 // 프로필
 const ProfileImg = styled.img`
@@ -219,6 +231,13 @@ const InfoText = styled.div`
   margin-left: 6px;
   white-space: pre-line;
 `;
+const InfoTextEmail = styled.div`
+  color: ${palette.gray65};
+  font-family: GmarketSansTTFMedium;
+  font-size: 10px;
+  margin-left: 6px;
+  user-select: text;
+`;
 
 const TitleContainer = styled.div`
   display: inline-block;
@@ -255,7 +274,7 @@ const PortfolioContainer = styled.div`
   border-radius: 3px;
   border: 2px solid ${palette.mainColor};
   background: ${palette.background};
-  margin-top: 26px;
+  margin-top: 15px;
   padding-bottom: 26px;
 `;
 
@@ -264,7 +283,7 @@ const PfTitleContainer = styled.div`
   display: flex;
   position: relative;
   width: fit-content;
-  margin: 32px 32px 0px 32px;
+  margin: 24px 32px 0px 32px;
 `;
 const PfTitle = styled.div`
   color: ${palette.gray3C};
@@ -378,6 +397,21 @@ const EducationDescription = styled.div`
   color: ${palette.gray3C};
   font-size: 15px;
   margin-left: 10px;
+`;
+
+const MoreResumeContainer = styled.div`
+  margin: auto;
+`;
+const MoreResumeBtn = styled.div`
+  margin: auto;
+  padding: 5px 14px 6px 14px;
+  border-radius: 99px;
+  border: 2px solid ${palette.darkBoxBackground};
+  background: ${palette.mainColor};
+  color: ${palette.white};
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  font-family: GmarketSansTTFMedium;
+  cursor: pointer;
 `;
 
 export default Jmi;
