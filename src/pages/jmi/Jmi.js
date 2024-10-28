@@ -17,8 +17,8 @@ const Jmi = () => {
     {"name": "UMC 4th Node.js 파트 수료 ", "period": "2023.03 ~ 2023.08 (6개월)", "institution": "NE(O)RDINARY"},
     {"name": "UMC 3rd Android 파트 수료 ", "period": "2022.09 ~ 2023.02 (6개월)", "institution": "NE(O)RDINARY"},
     {"name": "GNU 창의융합동아리 멘토", "period": "2021.07 ~ 2021.12 (6개월)", "institution": "경상국립대학교"},
-    {"name": "경상국립대학교 컴퓨터공학과 인공지능 학부 연구실 ", "period": "2021.03 ~ 2022.06 (1년 6개월)", "institution": "경상국립대학교"},
-    {"name": "GNU 창의동아리 Big D.T 운영", "period": "2020.05 ~ 2020.07 (3개월)", "institution": "경상국립대학교"},];
+    {"name": "경상국립대학교 컴퓨터공학과 인공지능 학부 연구실 (ML Lab)", "period": "2021.03 ~ 2022.06 (1년 6개월)", "institution": "경상국립대학교"},
+    {"name": "GNU 창의동아리 Big D.T 동아리장", "period": "2020.05 ~ 2020.07 (3개월)", "institution": "경상국립대학교"},];
   const awards = [{"name": "메카이브 메이커톤", "result": "우수상(3위)", "year": "2023", "institution": "한국잡월드"},
     {"name": "서울 우먼테크 해커톤", "result": "우수상(3위)", "year": "2023", "institution": "서울특별시, 서울시여성가족재단"},
     {"name": "한동대학교 제2회 영남권 대학 연합 해커톤 DREAMLANDTHON", "result": "장려상(5위)", "year": "2023", "institution": "한동대학교"},

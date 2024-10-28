@@ -11,13 +11,13 @@ const PortfolioItem = ({ title, thumbnailUrl, skills, period, goals, backgroundC
 
         <Title>{title}</Title>
 
+        <Period>{period}</Period>
+
         <Skills>
           {skills.map((skillName, idx) => (
             <Skill key={idx}>{skillName}</Skill>
           ))}
         </Skills>
-        
-        <Period>{period}</Period>
         
         <Goals>
           {goals.map((goal, idx) => (
@@ -57,30 +57,30 @@ const Title = styled.div`
   color: ${palette.gray3C};
   font-size: 16px;
   padding: 4px 10px;
-  margin: 6px 0px 0px 6px;
+  margin: 8px 0px 0px 6px;
   background: ${palette.white};
   border-radius: 99px;
+`;
+
+const Period = styled.div`
+  color: ${palette.gray3C};
+  font-size: 13px;
+  margin: 12px 0px 0px 8px;
 `;
 
 const Skills = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 8px;
+  margin-top: 6px;
 `;
 const Skill = styled.div`
   color: ${palette.gray3C};
   font-size: 13px;
-  padding: 4px 6px;
+  padding: 4px 6px 3px 6px;
   margin: 4px 0px 0px 6px;
   background: ${palette.portfolioSkill};
   border-radius: 5px;
-`;
-
-const Period = styled.div`
-  color: ${palette.gray3C};
-  font-size: 13px;
-  margin: 10px 0px 0px 8px;
 `;
 
 const Goals = styled.div`
