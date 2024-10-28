@@ -10,9 +10,9 @@ import Footer from "../../components/Footer";
 
 const Jmi = () => {
   const univ = "경상국립대학교, 컴퓨터공학과 졸업 | 2020.03 ~ 2024.08";
-  const info = "Kotlin 기반의 안드로이드 앱 개발을 주로 하고 있지만, 크로스 플랫폼과 AI, 데이터 분석에도 관심을 갖고 공부합니다. 약 1년 반 동안 인공지능 학부 연구실 생활을 하며 AI 학습을 진행하였고, Remote Internship을 통해 데이터 분석 학습하고 있습니다.\n\n"
-    + "프로젝트에서 다른 분야의 담당자들과 소통하는 것을 중요하게 생각합니다. 앱 개발 뿐만 아니라 디자인, 기획, 백엔드 지식을 갖춰 각 담당자들과 소통하는 역량을 기르는 중입니다\n\n"
-    + "서비스 완성 뿐만 아니라 기술을 온전히 습득하고 직접 구현할 수 있는 능력을 얻는 것에 목표를 두었습니다. 이를 위해 기능과 방법을 이해한 뒤에 구현으로 옮기려고 하고 있습니다. 이전에 구현해본 적 없는 기능이나 다른 방법이 있는 부분에 대해서도 적극적으로 도전하려고 합니다."
+  const info = ["빠르게 학습하고 도전하며 안드로이드 개발 역량을 쌓고 있습니다.",
+    "SW 마에스트로 15기에서 '마이꾸미' 앱을 개발하며, Compose, MVVM, 클린 아키텍처, 멀티 모듈, DI 등을 적용했습니다.",
+    "UMC를 통해 약 1개월 동안 Node.js를 이용해 API 개발을 공부하고, 시니어 맞춤 구인구직 웹의 백엔드 개발을 완수한 경험도 있습니다. 처음 배우는 기술도 빠르게 습득하여 활용할 수 있는 개발자가 되고자 합니다."];
   const techStacks = [{"label": "Android |", "stack": "Android Studio, Java, Kotlin"},
     {"label": "Cross-Platform |", "stack": "React Native, JavaScript, Flutter, Dart"},
     {"label": "Web Frontend |", "stack": "React.js, JavaScript, HTML/CSS"},
@@ -54,11 +54,6 @@ const Jmi = () => {
 
             <ContentGroup>
               <Info>
-                <InfoIcon src={organizationIcon}/>
-                <InfoText>{univ}</InfoText>
-              </Info>
-
-              <Info>
                 <InfoIcon src={emailIcon}/>
                 <InfoText>jungim7490@naver.com</InfoText>
               </Info>
@@ -86,8 +81,13 @@ const Jmi = () => {
                 <TitleHr />
               </TitleContainer>
             </InfoContent>
-
-            <InfoDescription>{info}</InfoDescription>
+            
+            <ul>
+              {info.map((info, idx) => (
+                <InfoDescription key={idx}>{info}</InfoDescription>
+              ))}
+            </ul>
+            
           </DescriptionContainer>
 
         </InfoContainer>
@@ -239,7 +239,7 @@ const InfoHr = styled.hr`
 
 // 소개
 const InfoContent = styled.div`
-  margin: 26px 0px 0px 20px;
+  margin: 26px 0px 15px 20px;
 `;
 const ProfileContainer = styled.div`
   display: flex;
@@ -287,12 +287,11 @@ const TitleHr = styled.hr`
 const DescriptionContainer = styled.div`
   display: block;
 `;
-const InfoDescription = styled.div`
+const InfoDescription = styled.li`
   color: ${palette.gray65};
   font-family: GmarketSansTTFMedium;
   font-size: 15px;
-  white-space: pre-line;
-  margin: 18px 24px 0px 22px;
+  margin: 5px 20px 0px 0px;
 `;
 
 const PortfolioContainer = styled.div`
