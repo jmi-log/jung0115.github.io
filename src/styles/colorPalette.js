@@ -11,6 +11,9 @@ const palette = {
   darkBoxBackground: "#CADDBD",
   infoBackground: "#96C576",
 
+  portfolioBackground: "#DBEBD1",
+  portfolioSkill: "#ABD68D",
+
   background: "#F3F3F3",
 
   gray82: "#828282",

@@ -9,8 +9,18 @@ import githubIcon from "../../icons/ic_info_github.png";
 import MoreContentsBtn from "../../components/MoreContentsBtn";
 import PostItemForHome from "../../components/post/PostItemForHome";
 import Footer from "../../components/Footer";
+import PortfolioItem from "../../components/portfolio/PortfolioItem";
 
 const Home = ({ onSelectJmi, onSelectPosts, onSelectPortfolio }) => {
+  const portfolios = [{"title": "마이꾸미", "period": "2024.04 ~ 2024.11 (8개월)", "goal": "🏢 SW마에스트로 15기", "backgroundColor": "#AEE7EB",
+    "skills": ["Android", "Kotlin", "MVVM", "Clean Architecture"], "thumbnailUrl": "https://github.com/user-attachments/assets/09faed84-1f1e-42a7-87a3-483035538c6d"},
+    {"title": "이루다", "period": "2023.07 ~ 2023.08 (2개월)", "goal": "🏆 서울 우먼테크 해커톤 우수상", "backgroundColor": "#BECAF0",
+      "skills": ["Android", "Kotlin", "ViewPager", "ViewBinding"], "thumbnailUrl": "https://github.com/womentech-hackathon/.github/assets/76805879/997d71ed-d623-4b37-920f-ac527979c982"},
+    {"title": "개발새발", "period": "2022.11 ~ 2023.01 (3개월)", "goal": "✅ Google Play Store 출시", "backgroundColor": "#E5D5F9",
+      "skills": ["Android", "Kotlin", "Jetpack Room", "Navigation"], "thumbnailUrl": "https://github.com/user-attachments/assets/c97fe103-8469-47d9-9ae8-5ddd4f3785d5"},
+    {"title": "감자톤 간식 게임 웹사이트", "period": "2023.09 ~ 2023.11 (3개월)", "goal": "💻 2023 한림대 x 강원대 멋쟁이사자처럼 연합 해커톤 '감자톤' 운영", "backgroundColor": "#F9E1CF",
+      "skills": ["React.js", "JavaScript", "TypeScript"], "thumbnailUrl": "https://github.com/jung0115/Potato-thon-game_FRONT/assets/76805879/dc618c0a-f64f-44b3-998f-b4c63a6a4782"}
+  ]
 
   return(
     <ContentFooter>
@@ -35,7 +45,7 @@ const Home = ({ onSelectJmi, onSelectPosts, onSelectPortfolio }) => {
 
               <Info>
                 <InfoIcon src={emailIcon}/>
-                <InfoText>jungim7490@naver.com</InfoText>
+                <InfoTextEmail>jungim7490@naver.com</InfoTextEmail>
               </Info>
 
               <Info>
@@ -81,6 +91,33 @@ const Home = ({ onSelectJmi, onSelectPosts, onSelectPortfolio }) => {
           </PostList>
 
         </NewPostContainer> */}
+
+        {/* 주요 포트폴리오 4개 */}
+        <PortfolioContainer>
+          <PortfolioHeader>
+            <PortfolioTitle>주요 포트폴리오</PortfolioTitle>
+            <MorePortfolioBtn onClick={onSelectPortfolio}>
+              <MoreContentsBtn text={"더보기"}/>
+            </MorePortfolioBtn>
+          </PortfolioHeader>
+
+          <PortfoliotHr/>
+
+          <PortfolioList>
+            {portfolios.map((port, idx) => (
+              <PortfolioItem
+                key={idx}
+                title={port.title}
+                thumbnailUrl={port.thumbnailUrl}
+                skills={port.skills}
+                period={port.period}
+                goal={port.goal}
+                backgroundColor={port.backgroundColor}
+                />
+            ))}
+          </PortfolioList>
+
+        </PortfolioContainer>
         
       </Container>
 
@@ -162,8 +199,15 @@ const InfoIcon = styled.img`
 const InfoText = styled.div`
   color: ${palette.gray65};
   font-family: GmarketSansTTFMedium;
-  font-size: 11px;
+  font-size: 12px;
   margin-left: 6px;
+`;
+const InfoTextEmail = styled.div`
+  color: ${palette.gray65};
+  font-family: GmarketSansTTFMedium;
+  font-size: 12px;
+  margin-left: 6px;
+  user-select: text;
 `;
 
 // 자기소개 자세히 보기
@@ -202,6 +246,41 @@ const PostList = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: -4px;
+`;
+
+// 포트폴리오
+const PortfolioContainer = styled.div`
+margin-top: 24px;
+`;
+
+const PortfolioHeader = styled.div`
+  display: flex;
+`;
+const PortfolioTitle = styled.div`
+  color: ${palette.gray3C};
+  font-family: GmarketSansTTFMedium;
+  font-size: 20px;
+  margin-left: 17px;
+  margin-bottom: 12px;
+  cursor: default;
+`;
+const MorePortfolioBtn = styled.div`
+  margin: 0px 26px 18px auto;
+  cursor: pointer;
+`;
+const PortfoliotHr = styled.hr`
+  width: auto;
+  height: 1.5px;
+  border: 0px;
+  background: ${palette.gray70};
+  margin: 0px 5px;
+`;
+
+const PortfolioList = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 16px 5px 0px 5px;
 `;
 
 export default Home;
