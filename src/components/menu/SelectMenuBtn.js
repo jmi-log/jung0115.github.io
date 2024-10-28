@@ -31,7 +31,7 @@ const MenuName = styled.div`
   font-size: 18px;
   color: ${palette.white};
   padding: 4px 10px;
-  background: ${palette.lightGreen};
+  background: ${palette.mainColor};
   border-radius: 20px;
   cursor: pointer;
 `;
