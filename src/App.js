@@ -76,6 +76,7 @@ const Container = styled.div`
   min-width: 100%;
   height: 100%;
   background: ${palette.background};
+  user-select: none;
 `;
 
 const MainContent = styled.div`
