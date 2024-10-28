@@ -19,13 +19,13 @@ const Jmi = () => {
     {"name": "GNU 창의융합동아리 멘토", "period": "2021.07 ~ 2021.12 (6개월)", "institution": "경상국립대학교"},
     {"name": "경상국립대학교 컴퓨터공학과 인공지능 학부 연구실 ", "period": "2021.03 ~ 2022.06 (1년 6개월)", "institution": "경상국립대학교"},
     {"name": "GNU 창의동아리 Big D.T 운영", "period": "2020.05 ~ 2020.07 (3개월)", "institution": "경상국립대학교"},];
-  const awards = [{"name": "2023 메카이브 메이커톤", "result": "우수상(3위)"},
-    {"name": "2023 서울 우먼테크 해커톤", "result": "우수상(3위)"},
-    {"name": "2023 HGU DREAMLAND 해커톤", "result": "장려상(5위)"},
-    {"name": "2023 4th NE(O)RDINARY 해커톤", "result": "최우수상(2위)"},
-    {"name": "2023 GNU 지식재산-빅데이터 경진대회", "result": "우수상"},
-    {"name": "2021 GNU 빅데이터 아이디어 공모전", "result": "장려상"},
-    {"name": "2020 GNU 창의동아리", "result": "우수상"},];
+  const awards = [{"name": "메카이브 메이커톤", "result": "우수상(3위)", "year": "2023", "institution": "한국잡월드"},
+    {"name": "서울 우먼테크 해커톤", "result": "우수상(3위)", "year": "2023", "institution": "서울특별시, 서울시여성가족재단"},
+    {"name": "한동대학교 제2회 영남권 대학 연합 해커톤 DREAMLANDTHON", "result": "장려상(5위)", "year": "2023", "institution": "한동대학교"},
+    {"name": "4th NE(O)RDINARY 해커톤", "result": "최우수상(2위)", "year": "2023", "institution": "NE(O)RDINARY"},
+    {"name": "GNU 지식재산-빅데이터 경진대회", "result": "우수상", "year": "2023", "institution": "경상대 빅데이터기술융합인재양성사업단"},
+    {"name": "GNU 빅데이터 아이디어 공모전", "result": "장려상", "year": "2021", "institution": "경상대 빅데이터 공유대학사업단"},
+    {"name": "GNU 창의동아리", "result": "우수상", "year": "2020", "institution": "경상대학교 미래교육원"},];
 
 
   return(
@@ -120,8 +120,10 @@ const Jmi = () => {
           <AwardContainer>
             {awards.map((award, idx) => (
               <Award key={idx}>
-                <AwardName>{award.name}</AwardName>
-                <AwardResult>{award.result}</AwardResult>
+                <AwardYearContainer><AwardContent>{award.year}</AwardContent></AwardYearContainer>
+                <AwardNameContainer><AwardContent>{award.name}</AwardContent></AwardNameContainer>
+                <AwardInstitutionContainer><AwardContent>{award.institution}</AwardContent></AwardInstitutionContainer>
+                <AwardResultContainer><AwardResult>{award.result}</AwardResult></AwardResultContainer>
               </Award>
             ))}
 
@@ -333,11 +335,22 @@ const Award = styled.div`
   display: flex;
   margin-bottom: 10px;
 `;
-const AwardName = styled.div`
+const AwardYearContainer = styled.div`
+  flex: 0.6;
+`;
+const AwardNameContainer = styled.div`
+  flex: 5;
+`;
+const AwardInstitutionContainer = styled.div`
+  flex: 3;
+`;
+const AwardResultContainer = styled.div`
+  flex: 1.8;
+`;
+const AwardContent = styled.div`
   color: ${palette.gray3C};
   font-family: GmarketSansTTFMedium;
   font-size: 15px;
-  margin-right: 6px;
 `;
 const AwardResult = styled.div`
   color: ${palette.gray3C};
