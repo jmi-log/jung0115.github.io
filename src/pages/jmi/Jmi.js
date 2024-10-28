@@ -28,20 +28,20 @@ const Jmi = () => {
     {"name": "Dream Quest", "description": "우울한 사람을 위한 활동 제안 서비스", "role": "React.js", "peroid": "2023.07 ~ 2023.07", "result1": "", "result2": "🏆"},
     {"name": "모우미", "description": "발달 장애인을 위한 쉬운 언어 번역 중개 서비스", "role": "React Native", "peroid": "2023.08 ~ 2023.10", "result1": "", "result2": "🏆"},
     {"name": "감자톤 주식 페이지", "description": "한림대x강원대 멋쟁이사자처럼 연합해커톤(감자톤) 주식 페이지", "role": "React.js", "peroid": "2023.09 ~ 2023.11", "result1": "✅", "result2": ""}];
-  const experiences = [{"name": "GNU 창의동아리 Big D.T 운영", "period": "2020.05 ~ 2020.07"},
-    {"name": "경상국립대학교 컴퓨터공학과 인공지능 학부 연구실 ", "period": "2021.03 ~ 2022.06"},
-    {"name": "GNU LINC+ 창업동아리 EARIA 운영 ", "period": "2021.05 ~ 2021.12"},
-    {"name": "GNU 창의융합동아리 멘토", "period": "2021.07 ~ 2021.12"},
-    {"name": "UMC 3rd Android 파트 수료 ", "period": "2022.09 ~ 2023.02"},
-    {"name": "UMC 4th Node.js 파트 수료 ", "period": "2023.03 ~ 2023.08"},
-    {"name": "Remote Internship Program 4th Expert Track 수료", "period": "2023.09 ~ 2023.11"}];
-  const awards = [{"name": "2020 GNU 창의동아리", "result": "우수상"},
-    {"name": "2021 GNU 빅데이터 아이디어 공모전", "result": "장려상"},
-    {"name": "2023 GNU 지식재산-빅데이터 경진대회", "result": "우수상"},
-    {"name": "2023 4th NE(O)RDINARY 해커톤", "result": "최우수상(2위)"},
-    {"name": "2023 HGU DREAMLAND 해커톤", "result": "장려상(5위)"},
+  const experiences = [{"name": "SW마에스트로 15기 수료 예정", "period": "2024.04 ~ 2024.11 (8개월)"},
+    {"name": "Remote Internship Program 4th Expert Track 수료", "period": "2023.09 ~ 2023.11 (3개월)"},
+    {"name": "UMC 4th Node.js 파트 수료 ", "period": "2023.03 ~ 2023.08 (6개월)"},
+    {"name": "UMC 3rd Android 파트 수료 ", "period": "2022.09 ~ 2023.02 (6개월)"},
+    {"name": "GNU 창의융합동아리 멘토", "period": "2021.07 ~ 2021.12 (6개월)"},
+    {"name": "경상국립대학교 컴퓨터공학과 인공지능 학부 연구실 ", "period": "2021.03 ~ 2022.06 (1년 6개월)"},
+    {"name": "GNU 창의동아리 Big D.T 운영", "period": "2020.05 ~ 2020.07 (3개월)"},];
+  const awards = [{"name": "2023 메카이브 메이커톤", "result": "우수상(3위)"},
     {"name": "2023 서울 우먼테크 해커톤", "result": "우수상(3위)"},
-    {"name": "2023 메카이브 메이커톤", "result": "우수상(3위)"}];
+    {"name": "2023 HGU DREAMLAND 해커톤", "result": "장려상(5위)"},
+    {"name": "2023 4th NE(O)RDINARY 해커톤", "result": "최우수상(2위)"},
+    {"name": "2023 GNU 지식재산-빅데이터 경진대회", "result": "우수상"},
+    {"name": "2021 GNU 빅데이터 아이디어 공모전", "result": "장려상"},
+    {"name": "2020 GNU 창의동아리", "result": "우수상"},];
 
 
   return(
@@ -96,19 +96,6 @@ const Jmi = () => {
         <PortfolioContainer>
 
           {/* Tech Stack */}
-          <PfTitleContainer>
-            <PfTitle>🛠️ Tech Stack</PfTitle>
-            <PfTitleLine/>
-          </PfTitleContainer>
-
-          <TechStackContainer>
-            {techStacks.map((techStack, idx) => (
-              <TechStack key={idx}>
-                <TechStackLabel>{techStack.label}</TechStackLabel>
-                <TechStackText>{techStack.stack}</TechStackText>
-              </TechStack>
-            ))}
-          </TechStackContainer>
 
           {/* Project */}
           <PfTitleContainer>
@@ -418,7 +405,7 @@ const ExperienceName = styled.div`
   flex: 8;
 `;
 const ExperiencePeriod = styled.div`
-  flex: 2;
+  flex: 3;
 `;
 const ExperienceLine = styled.div`
   display: flex;
