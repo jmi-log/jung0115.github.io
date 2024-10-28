@@ -6,7 +6,7 @@ const Portfolio = () => {
   return (
     <ContentFooter>
       <Container>
-        포트폴리오 내용 채우기
+        
       </Container>
 
       <Footer />
