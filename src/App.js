@@ -10,6 +10,7 @@ import Home from "./pages/home/Home";
 import Footer from "./components/Footer";
 import Menus from "./components/menu/Menus";
 import Jmi from "./pages/jmi/Jmi";
+import Portfolio from "./pages/portfolio/Portfolio";
 import Posts from "./pages/posts/Posts";
 import PostDetail from "./pages/posts/PostDetail";
 
@@ -22,6 +23,10 @@ function App() {
 
   const onSelectJmi = () => {
     setSelectMenu("jmi");
+  }
+
+  const onSelectPortfolio = () => {
+    setSelectMenu("portfolio");
   }
 
   const onSelectPosts = () => {
@@ -42,8 +47,9 @@ function App() {
           {/* 컨텐츠 내용 */}
           <Contents>
             <Routes>
-              <Route path="/" element={<Home onSelectJmi={onSelectJmi} onSelectPosts={onSelectPosts} />} />
+              <Route path="/" element={<Home onSelectJmi={onSelectJmi} onSelectPosts={onSelectPosts} onSelectPortfolio={onSelectPortfolio} />} />
               <Route path="/jmi" element={<Jmi />} />
+              <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/posts" element={<Posts />} />
               <Route path="/post-detail" element={<PostDetail />} />
             </Routes>
@@ -54,6 +60,7 @@ function App() {
             onSelectHome={onSelectHome}
             onSelectJmi={onSelectJmi}
             onSelectPosts={onSelectPosts}
+            onSelectPortfolio={onSelectPortfolio}
             selectMenuApp={selectMenu}/>
 
         </MainContent>
