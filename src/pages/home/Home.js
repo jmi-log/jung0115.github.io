@@ -14,7 +14,9 @@ import PortfolioItem from "../../components/portfolio/PortfolioItem";
 
 const Home = ({ onSelectJmi, onSelectPortfolio }) => {
   // 포폴 상위 3개까지만 보여주기
-  const portfoliosMain = portfolios.slice(0, 3);
+  const portfoliosMain = portfolios
+    .sort((a, b) => a.priority - b.priority)
+    .slice(0, 3);
 
   return(
     <ContentFooter>

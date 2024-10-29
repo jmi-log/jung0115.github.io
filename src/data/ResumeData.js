@@ -1,11 +1,14 @@
+// 학교
 const education = {"description": "경상국립대학교, 컴퓨터공학과 졸업", "period": "2020.03 ~ 2024.08"};
 
+// 소개
 const infos = [
   "빠르게 학습하고 도전하며 안드로이드 개발 역량을 쌓고 있습니다.",
   "SW 마에스트로 15기에서 '마이꾸미' 앱을 개발하며, Compose, MVVM, 클린 아키텍처, 멀티 모듈, DI 등을 적용했습니다.",
   "UMC를 통해 약 1개월 동안 Node.js를 이용해 API 개발을 공부하고, 시니어 맞춤 구인구직 웹의 백엔드 개발을 완수한 경험도 있습니다. 처음 배우는 기술도 빠르게 습득하여 활용할 수 있는 개발자가 되고자 합니다."
 ];
 
+// 경험
 const experiences = [
   {"name": "SW마에스트로 15기 수료 예정", "period": "2024.04 ~ 2024.11 (8개월)", "institution": "과학기술정보통신부"},
   {"name": "Remote Internship Program 4th Expert Track 수료", "period": "2023.09 ~ 2023.11 (3개월)", "institution": "고용노동부"},
@@ -16,6 +19,7 @@ const experiences = [
   {"name": "GNU 창의동아리 Big D.T 동아리장", "period": "2020.05 ~ 2020.07 (3개월)", "institution": "경상국립대학교"},
 ];
 
+// 수상
 const awards = [
   {"name": "메카이브 메이커톤", "result": "우수상(3위)", "year": "2023", "institution": "한국잡월드"},
   {"name": "서울 우먼테크 해커톤", "result": "우수상(3위)", "year": "2023", "institution": "서울특별시, 서울시여성가족재단"},
@@ -26,4 +30,22 @@ const awards = [
   {"name": "GNU 창의동아리", "result": "우수상", "year": "2020", "institution": "경상대학교 미래교육원"},
 ];
 
-export default { education, infos, experiences, awards };
+// 출시한 서비스
+const release = [
+  {
+    "name": "마이꾸미",
+    "period": "2024.10",
+    "platform": "Android",
+    "icon": "https://play-lh.googleusercontent.com/Wsql4mOkvfy38kMCQSX4Qmxyz_ggldzV7NBfBtfEN_W9khkLAFxNgTOfzVVBeVGFxQ=w480-h960-rw",
+    "url": "https://play.google.com/store/apps/details?id=com.marastro.mykkumi.android"
+  },
+  {
+    "name": "개발새발",
+    "period": "2023.02",
+    "platform": "Android",
+    "icon": "https://play-lh.googleusercontent.com/qzDpx0FP4vn_oslHuwIhXF8Mf8TDq8UCALvh_mQv1wert0eTCDr8um7jvsWs1pjyITpp=w480-h960-rw",
+    "url": "https://play.google.com/store/apps/details?id=com.gaebalsaebal.gaebal_saebal_aos_ver2"
+  },
+]
+
+export default { education, infos, experiences, awards, release };

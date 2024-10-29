@@ -10,7 +10,7 @@ import githubIcon from "../../icons/ic_info_github.png";
 import Footer from "../../components/Footer";
 
 const Jmi = () => {
-  const { education, infos, experiences, awards }  = ResumeData;
+  const { education, infos, experiences, awards, release }  = ResumeData;
 
   return(
     <ContentFooter>
@@ -59,6 +59,15 @@ const Jmi = () => {
           </DescriptionContainer>
 
         </InfoContainer>
+
+        {/* 출시 서비스 */}
+        <ReleaseContainer>
+          {release.map((service, idx) => (
+            <ReleaseItem key={idx}>
+              test
+            </ReleaseItem>
+          ))}
+        </ReleaseContainer>
 
         {/* 이력서 자세히 보기 */}
         <MoreResumeContainer>
@@ -170,7 +179,7 @@ const InfoContainer = styled.div`
   border-radius: 3px;
   border: 2px solid ${palette.mainColor};
   background: ${palette.background};
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 `;
 // 프로필
 const ProfileImg = styled.img`
@@ -251,6 +260,28 @@ const InfoDescription = styled.li`
   margin: 5px 20px 0px 0px;
 `;
 
+// 출시 서비스
+const ReleaseContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  border-radius: 3px;
+  border: 2px solid ${palette.mainColor};
+  background: ${palette.background};
+  margin-bottom: 20px;
+  padding: 10px;
+`;
+const ReleaseItem = styled.div`
+  padding: 5px;
+  margin: 0px 4px;
+  align-items: center;
+  background: ${palette.releaseItem};
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+`;
+
+// 포트폴리오
 const PortfolioContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -258,7 +289,7 @@ const PortfolioContainer = styled.div`
   border-radius: 3px;
   border: 2px solid ${palette.mainColor};
   background: ${palette.background};
-  margin-top: 15px;
+  margin-top: 20px;
   padding-bottom: 26px;
 `;
 
@@ -339,7 +370,7 @@ const Award = styled.div`
   margin-bottom: 10px;
 `;
 const AwardYearContainer = styled.div`
-  flex: 0.6;
+  flex: 1;
 `;
 const AwardNameContainer = styled.div`
   flex: 5;

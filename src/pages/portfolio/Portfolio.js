@@ -8,6 +8,9 @@ import Footer from "../../components/Footer";
 import PortfolioItem from "../../components/portfolio/PortfolioItem";
 
 const Portfolio = () => {
+  // 기본 정렬은 중요도순
+  portfolios.sort((a, b) => a.priority - b.priority);
+
   return (
     <ContentFooter>
       <Container>

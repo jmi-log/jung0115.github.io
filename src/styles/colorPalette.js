@@ -14,6 +14,8 @@ const palette = {
   portfolioBackground: "#DBEBD1",
   portfolioSkill: "#ABD68D",
 
+  releaseItem: "#C2D9B2",
+
   background: "#F3F3F3",
 
   gray82: "#828282",
